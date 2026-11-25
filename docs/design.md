@@ -1,9 +1,9 @@
 ---
 name: Кейс
 colors:
-  surface: '#fbf9f9'
+  surface: '#F8F9FA'
   surface-dim: '#dbdad9'
-  surface-bright: '#fbf9f9'
+  surface-bright: '#F8F9FA'
   surface-container-lowest: '#ffffff'
   surface-container-low: '#f5f3f3'
   surface-container: '#efeded'
@@ -21,7 +21,7 @@ colors:
   primary-container: '#CC4800'
   on-primary-container: '#fffbff'
   inverse-primary: '#ffb59a'
-  secondary: '#5f5e5e'
+  secondary: '#212121'
   on-secondary: '#ffffff'
   secondary-container: '#e2dfde'
   on-secondary-container: '#636262'
@@ -45,7 +45,7 @@ colors:
   tertiary-fixed-dim: '#abc7ff'
   on-tertiary-fixed: '#001b3f'
   on-tertiary-fixed-variant: '#00458f'
-  background: '#fbf9f9'
+  background: '#F8F9FA'
   on-background: '#1b1c1c'
   surface-variant: '#e3e2e2'
 typography:
@@ -129,10 +129,6 @@ spacing:
 ## Стиль и основа
 - **Три слова о стиле:** рабочий, светлый, чёткий
 - **Главный цвет:** оранжевый `#E65100` (только кнопки, активное меню, акценты)
-- **Примеры сайтов (идея и настроение, не копия):**
-  1. <ВСТАВЬ ССЫЛКУ 1 (dribbble.com / behance.net)>
-  2. <ВСТАВЬ ССЫЛКУ 2>
-  3. <ВСТАВЬ ССЫЛКУ 3, по желанию>
 - **Проект:** «Кейс» — информационная система учёта оборудования для выездных работ. Экраны: вход, каталог, карточка оборудования, мои выдачи, админ-панель оборудования.
 
 ## Не входит в MVP (не рисовать и не добавлять)
@@ -155,10 +151,10 @@ The palette balances a focused, industrial orange primary tone against a stark, 
 
 ### Semantic Equipment Status Badges
 Status indicators must strictly adhere to the following badge definitions to eliminate cognitive latency:
-- **Available / Доступно**: Background `#E8F5E9`, text `#1B5E20`.
-- **In Use / Unassigned / Недоступно / На руках**: Background `#F5F5F5`, text `#616161`.
-- **In Repair / Maintenance / В ремонте**: Background `#FFEBEE`, text `#C62828`.
-- **Decommissioned / Списано**: Background `#EEEEEE`, text `#757575`.
+- **Доступно**: Background `#E8F5E9`, text `#1B5E20`.
+- **На руках**: Background `#F5F5F5`, text `#616161`.
+- **В ремонте**: Background `#FFEBEE`, text `#C62828`.
+- **Списано**: Background `#EEEEEE`, text `#757575`.
 
 ## Typography
 
@@ -183,7 +179,7 @@ The layout employs a dense, structured fluid-grid layout bounded inside a maximu
 
 In alignment with industrial utilitarian minimalism, depth is achieved almost entirely through flat structural layering and crisp borders rather than soft, ambient shadows.
 
-- **Layer 0 (Canvas)**: Background `#F8F9FA` or `#FFFFFF`.
+- **Layer 0 (Canvas)**: Background `#F8F9FA`.
 - **Layer 1 (Cards, Panel Containers, Tables)**: Pure white `#FFFFFF` bounded by a solid 1px `#E0E0E0` border.
 - **Layer 2 (Overlays, Flyouts, Slide-over Panels)**: Pure white surface with a 1px `#D0D0D0` border accompanied by an intentional, tight utility shadow: `0 4px 12px rgba(0, 0, 0, 0.08)`.
 - **Active Focus**: `box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #E65100` for clear keyboard accessibility.
@@ -205,7 +201,7 @@ Geometry is intentionally firm and architectural:
 ### Badges & Status Indicators
 Rendered as inline-flex items, font size 11px, font-weight 600, padding 2px 8px, border-radius 4px, non-pill format:
 - **Доступно**: Background `#E8F5E9`, text `#1B5E20`, border 1px solid transparent.
-- **Недоступно / На руках**: Background `#F5F5F5`, text `#616161`, border 1px solid `#E0E0E0`.
+- **На руках**: Background `#F5F5F5`, text `#616161`, border 1px solid `#E0E0E0`.
 - **В ремонте**: Background `#FFEBEE`, text `#C62828`, border 1px solid transparent.
 - **Списано**: Background `#EEEEEE`, text `#757575`, border 1px solid transparent.
 
