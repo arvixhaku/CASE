@@ -134,88 +134,88 @@ spacing:
 ## Не входит в MVP (не рисовать и не добавлять)
 Фото оборудования, уведомления, отчёты и экспорт Excel/PDF, сканеры штрихкодов и RFID, оплата, чат, отзывы, самостоятельная регистрация. Сотрудник не видит, кто ещё брал оборудование (только срок возврата); историю по каждой единице видит только администратор.
 
-## Brand & Style
+## Бренд и стиль
 
-This design system is engineered for internal hardware and equipment tracking environments. It embodies an industrial utilitarian minimalism inspired by tools like Linear, GitHub Enterprise, and dense technical consoles. The interface prioritizes structural clarity, instantaneous visual scanning, high contrast, and dense data legibility over decorative flourishes.
+Эта дизайн-система предназначена для внутреннего учёта оборудования. Её основа — утилитарный индустриальный минимализм с ориентацией на такие инструменты, как Linear, GitHub Enterprise и технические панели с большим объёмом данных. В интерфейсе важнее чёткая структура, быстрое визуальное восприятие, высокий контраст и удобочитаемость данных, а не декоративные элементы.
 
-The target audience consists of hardware engineers, IT asset managers, lab technicians, and warehouse supervisors who handle individual equipment records, lifecycle audits, and check-in/check-out accountability. The user experience evokes absolute precision, stability, and operational efficiency without unnecessary cognitive overhead.
+Основные пользователи — инженеры, специалисты по учёту ИТ-активов, лаборанты и заведующие складом. Они работают с карточками оборудования, проверяют его жизненный цикл и фиксируют выдачу и возврат. Интерфейс должен быть точным, надёжным и эффективным, не создавая лишней когнитивной нагрузки.
 
-## Colors
+## Цвета
 
-The palette balances a focused, industrial orange primary tone against a stark, high-contrast monochrome foundation and functional semantic status colors.
+Палитра сочетает выразительный индустриальный оранжевый с контрастной монохромной основой и функциональными цветами статусов.
 
-### Key Palettes
-- **Primary (`#E65100`)**: Deep vivid industrial orange used deliberately for primary interactive actions, high-priority state highlights, active navigation accents, and focal focus indicators.
-- **Secondary (`#212121`)**: Deep carbon black used for structural text, primary labels, and secondary interactive borders.
-- **Surface & Backgrounds**: Crisp canvas white (`#FFFFFF`) layered on neutral slate gray (`#F8F9FA` to `#F5F5F5`) for container segmentation. Hairline dividing borders use `#E0E0E0` (with `#D0D0D0` on interactive hover states).
+### Основные палитры
+- **Основной (`#E65100`)**: насыщенный индустриальный оранжевый для главных действий, важных состояний, активных элементов навигации и индикаторов фокуса.
+- **Дополнительный (`#212121`)**: глубокий угольно-чёрный для основного текста, подписей и границ вторичных элементов управления.
+- **Поверхности и фон**: чистый белый (`#FFFFFF`) сочетается с нейтральным серым (`#F8F9FA`–`#F5F5F5`) для разделения областей. Для тонких разделительных линий используется `#E0E0E0`, а при наведении на интерактивные элементы — `#D0D0D0`.
 
-### Semantic Equipment Status Badges
-Status indicators must strictly adhere to the following badge definitions to eliminate cognitive latency:
-- **Доступно**: Background `#E8F5E9`, text `#1B5E20`.
-- **На руках**: Background `#F5F5F5`, text `#616161`.
-- **В ремонте**: Background `#FFEBEE`, text `#C62828`.
-- **Списано**: Background `#EEEEEE`, text `#757575`.
+### Цветовые метки статусов оборудования
+Для ясного и быстрого распознавания статусы оформляются по следующим правилам:
+- **Доступно**: фон `#E8F5E9`, текст `#1B5E20`.
+- **На руках**: фон `#F5F5F5`, текст `#616161`.
+- **В ремонте**: фон `#FFEBEE`, текст `#C62828`.
+- **Списано**: фон `#EEEEEE`, текст `#757575`.
 
-## Typography
+## Типографика
 
-The design system standardizes on **Inter** across all UI layers. For serial numbers, inventory IDs, asset tags, and date columns, utilize `font-feature-settings: 'tnum' on, 'cv05' on` to ensure tabular alignment and clear character differentiation (e.g., distinguishing numeral `0` from letter `O`).
+Во всех слоях интерфейса используется шрифт **Inter**. Для серийных и инвентарных номеров, меток активов и дат применяйте `font-feature-settings: 'tnum' on, 'cv05' on`: это выравнивает цифры по разрядам и помогает различать похожие символы, например цифру `0` и букву `O`.
 
-- Headings are concise, bold, and strictly restrained in scale to avoid displacing functional table views and forms.
-- Data grids, metadata lists, and form controls rely on `body-md` (14px) and `label-md` (12px) for optimal information density without sacrificing legibility.
-- Status badges and category chips use `label-sm` with slight tracking for swift recognition.
+- Заголовки должны быть краткими и выразительными, но умеренными по размеру, чтобы оставалось место для таблиц и форм.
+- В таблицах, списках метаданных и элементах управления используются `body-md` (14px) и `label-md` (12px): это обеспечивает плотное размещение информации без потери читаемости.
+- Для меток статусов и категорий используется `label-sm` с небольшим межбуквенным интервалом.
 
-## Layout & Spacing
+## Макет и интервалы
 
-The layout employs a dense, structured fluid-grid layout bounded inside a maximum viewport container (`1440px`) or full-width data dashboard. 
+Макет строится на плотной структурированной адаптивной сетке. Рабочая область ограничена максимальной шириной `1440px` либо занимает всю ширину панели данных.
 
-- **Grid Model**: 12-column responsive layout with thin lines dividing the main views.
-- **Rhythm**: Standard spacing aligns to an 8px grid baseline with 4px sub-increments (`0.25rem`, `0.5rem`, `0.75rem`, `1.25rem`, `2rem`) to maintain compact tool layouts.
-- **Breakpoints**:
-  - `Desktop (>= 1280px)`: top navigation bar (no sidebar), fluid data workspace, 24px column gutters.
-  - `Tablet (768px - 1279px)`: Compact top navigation, 16px margins, tables convert to horizontally scrolling panes.
-  - `Mobile (< 768px)`: Single-column flow with full-width action headers, sticky bottom actions, and 16px margins.
+- **Сетка**: адаптивная сетка из 12 колонок; основные области разделяются тонкими линиями.
+- **Интервалы**: базовый шаг сетки — 8px, с дополнительными шагами по 4px (`0.25rem`, `0.5rem`, `0.75rem`, `1.25rem`, `2rem`) для компактного размещения элементов.
+- **Контрольные точки**:
+  - `Компьютеры (>= 1280px)`: верхняя панель навигации без боковой панели, адаптивная рабочая область, промежутки между колонками 24px.
+  - `Планшеты (768px - 1279px)`: компактная верхняя навигация, поля 16px; таблицы прокручиваются по горизонтали.
+  - `Телефоны (< 768px)`: одноколоночный макет, заголовки действий на всю ширину, закреплённые снизу кнопки и поля 16px.
 
-## Elevation & Depth
+## Слои и глубина
 
-In alignment with industrial utilitarian minimalism, depth is achieved almost entirely through flat structural layering and crisp borders rather than soft, ambient shadows.
+В духе утилитарного индустриального минимализма глубина создаётся преимущественно плоскими слоями и чёткими границами, а не мягкими тенями.
 
-- **Layer 0 (Canvas)**: Background `#F8F9FA`.
-- **Layer 1 (Cards, Panel Containers, Tables)**: Pure white `#FFFFFF` bounded by a solid 1px `#E0E0E0` border.
-- **Layer 2 (Overlays, Flyouts, Slide-over Panels)**: Pure white surface with a 1px `#D0D0D0` border accompanied by an intentional, tight utility shadow: `0 4px 12px rgba(0, 0, 0, 0.08)`.
-- **Active Focus**: `box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #E65100` for clear keyboard accessibility.
+- **Слой 0 (рабочий фон)**: фон `#F8F9FA`.
+- **Слой 1 (карточки, панели, таблицы)**: белый фон `#FFFFFF` с чёткой границей 1px `#E0E0E0`.
+- **Слой 2 (всплывающие панели, выезжающие меню и боковые панели)**: белый фон с границей 1px `#D0D0D0` и аккуратной функциональной тенью `0 4px 12px rgba(0, 0, 0, 0.08)`.
+- **Фокус элемента**: `box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #E65100` для удобной навигации с клавиатуры.
 
-## Shapes
+## Форма и скругления
 
-Geometry is intentionally firm and architectural:
-- Base border radius is set to **`roundedness: 1`** (`0.25rem` / 4px).
-- Inputs, action buttons, table cell containers, and status badges consistently adopt 4px corner radii.
-- Modals, drawers, and larger detached container cards use up to 6px-8px (`rounded-lg`) maximum. Full-pill radii are avoided to preserve the disciplined, technical tool appearance.
+Формы элементов строгие и лаконичные:
+- Базовое скругление задано значением **`roundedness: 1`** (`0.25rem` / 4px).
+- Для полей ввода, кнопок действий, ячеек таблиц и меток статусов используется скругление углов 4px.
+- Для модальных окон, выдвижных панелей и крупных карточек допускается скругление до 6px–8px (`rounded-lg`). Полностью скруглённые формы не используются, чтобы сохранить строгий технический стиль.
 
-## Components
+## Компоненты
 
-### Buttons
-- **Primary**: Background `#E65100`, text `#FFFFFF`, font-weight 500, height 36px (32px for compact table toolbars), padding 0 14px, radius 4px. Hover state: `#CC4800`. Active state: `#B23F00`.
-- **Secondary**: Pure white background `#FFFFFF`, 1px solid border `#E0E0E0`, text `#212121`, font-weight 500. Hover state: border color `#D0D0D0`, background `#F5F5F5`. Active state: background `#EEEEEE`.
-- **Destructive**: White background, 1px solid border `#FFCDD2`, text `#C62828`. Hover: `#FFEBEE`.
+### Кнопки
+- **Основная**: фон `#E65100`, текст `#FFFFFF`, насыщенность шрифта 500, высота 36px (32px для компактных панелей таблиц), внутренние отступы 0 14px, скругление 4px. При наведении: `#CC4800`. В активном состоянии: `#B23F00`.
+- **Вторичная**: белый фон `#FFFFFF`, сплошная граница 1px `#E0E0E0`, текст `#212121`, насыщенность шрифта 500. При наведении: цвет границы `#D0D0D0`, фон `#F5F5F5`. В активном состоянии: фон `#EEEEEE`.
+- **Опасное действие**: белый фон, сплошная граница 1px `#FFCDD2`, текст `#C62828`. При наведении: `#FFEBEE`.
 
-### Badges & Status Indicators
-Rendered as inline-flex items, font size 11px, font-weight 600, padding 2px 8px, border-radius 4px, non-pill format:
-- **Доступно**: Background `#E8F5E9`, text `#1B5E20`, border 1px solid transparent.
-- **На руках**: Background `#F5F5F5`, text `#616161`, border 1px solid `#E0E0E0`.
-- **В ремонте**: Background `#FFEBEE`, text `#C62828`, border 1px solid transparent.
-- **Списано**: Background `#EEEEEE`, text `#757575`, border 1px solid transparent.
+### Метки и индикаторы статусов
+Отображаются как элементы `inline-flex`: размер шрифта 11px, насыщенность 600, внутренние отступы 2px 8px, скругление 4px; форма не должна быть капсульной:
+- **Доступно**: фон `#E8F5E9`, текст `#1B5E20`, граница 1px solid transparent.
+- **На руках**: фон `#F5F5F5`, текст `#616161`, граница 1px solid `#E0E0E0`.
+- **В ремонте**: фон `#FFEBEE`, текст `#C62828`, граница 1px solid transparent.
+- **Списано**: фон `#EEEEEE`, текст `#757575`, граница 1px solid transparent.
 
-### Inputs & Select Fields
-- Height 36px, background `#FFFFFF`, border 1px solid `#E0E0E0`, radius 4px, padding 0 10px, typography `body-md` (`#212121`).
-- Hover: border `#BDBDBD`.
-- Focus: border `#E65100`, outline 2px solid rgba(230, 81, 0, 0.2).
-- Placeholder: `#9E9E9E`.
+### Поля ввода и списки
+- Высота 36px, фон `#FFFFFF`, граница 1px `#E0E0E0`, скругление 4px, внутренние отступы 0 10px, типографика `body-md` (`#212121`).
+- При наведении: граница `#BDBDBD`.
+- При фокусе: граница `#E65100`, обводка 2px solid rgba(230, 81, 0, 0.2).
+- Текст-подсказка: `#9E9E9E`.
 
-### Equipment Data Table
-- Density: Compact (row height 40px to 44px).
-- Header: Background `#F5F5F5`, text `#616161`, uppercase `label-sm`, bottom border 1px solid `#E0E0E0`.
-- Cells: Bottom border 1px solid `#F0F0F0`, tabular numeric values for IDs, serials, and timestamps. Hover row background: `#FAFAFA`.
+### Таблица оборудования
+- Плотность: компактная (высота строки от 40px до 44px).
+- Заголовок: фон `#F5F5F5`, текст `#616161`, прописные буквы `label-sm`, нижняя граница 1px `#E0E0E0`.
+- Ячейки: нижняя граница 1px `#F0F0F0`; для идентификаторов, серийных номеров и времени используются выровненные по разрядам цифры. При наведении фон строки меняется на `#FAFAFA`.
 
-### Checkboxes & Radios
-- Size 16x16px, border 1px solid `#BDBDBD`, radius 3px (checkbox) or circular (radio).
-- Checked: Background `#E65100`, border `#E65100`, checkmark white.
+### Флажки и переключатели
+- Размер 16x16px, граница 1px solid `#BDBDBD`, скругление 3px для флажка или круглая форма для переключателя.
+- Выбранное состояние: фон `#E65100`, граница `#E65100`, отметка белая.
